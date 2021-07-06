@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/notesTopic">
+
+    <fragment
+        android:id="@+id/notesTopic"
+        android:name="com.example.notepadapp.fragments.NotesTopic"
+        android:label="fragment_notes_topic"
+        tools:layout="@layout/fragment_notes_topic" >
+        <action
+            android:id="@+id/action_notesTopic_to_notesDetails"
+            app:destination="@id/notesDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/notesDetails"
+        android:name="com.example.notepadapp.fragments.NotesDetails"
+        android:label="fragment_notes_details"
+        tools:layout="@layout/fragment_notes_details" >
+        <action
+            android:id="@+id/action_notesDetails_to_notesTopic"
+            app:destination="@id/notesTopic" />
+    </fragment>
+</navigation>
